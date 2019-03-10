@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="spell" class="com.constructor_DI.pojo.Spell"></bean>
+
+
+    <!--如果你想要向一个对象传递一个引用，你需要使用 标签的 ref 属性，如果你想要直接传递值，那么你应该使用如上所示的 value 属性-->
+    <!--基于索引传递构造函数的参数-->
+    <bean id="edit" class="com.constructor_DI.pojo.Edit">
+        <constructor-arg  index="0" ref="spell"/>
+    </bean>
+</beans>
